@@ -55,7 +55,7 @@ git add. Git commit -m "A descriptive message about your contribution." ```
 Push your branch to your fork:
 
 ```bash
-git push origin YOUR_BRANCH_NAME ```
+git push origin YOUR_BRANCH_NAME```
 
 Go to the GitHub page of your forked repository and click "Pull Request" to submit your changes to the main project.
 
