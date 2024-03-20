@@ -20,7 +20,7 @@ You can start by forking the project repository to your GitHub account. Visit th
 Open VS Code, and in the terminal, clone your forked repository using:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CMSC495-Capstone.git```
+git clone https://github.com/YOUR_USERNAME/CMSC495-Capstone.git ```
 
 Replace `YOUR_USERNAME` with your GitHub username.
 
@@ -28,40 +28,52 @@ Replace `YOUR_USERNAME` with your GitHub username.
 To keep your fork synchronized with the main project set the original repository as an upstream remote:
 
 ```bash
-git remote add upstream https://github.com/AwaywithCharles/CMSC495-Capstone.git```
+git remote add upstream https://github.com/AwaywithCharles/CMSC495-Capstone.git ```
 
 ### 5. Create a New Branch
 
 For each new feature or fix, create a new branch:
 
 ```bash
-git checkout -b YOUR_BRANCH_NAME```
+git checkout -b YOUR_BRANCH_NAME ```
 
 Replace YOUR_BRANCH_NAME with a descriptive name for your branch.
 
 ### 6. Making Changes
+
 Open the project in VS Code to make your changes.
+
 Test your changes thoroughly.
+
 Commit your changes with a descriptive message:
+
 ```bash
 git add. Git commit -m "A descriptive message about your contribution." ```
 
 ### 7. Submitting Your Contributions
+
 Push your branch to your fork:
 
 ```bash
 git push origin YOUR_BRANCH_NAME ```
 
 Go to the GitHub page of your forked repository and click "Pull Request" to submit your changes to the main project.
+
 Fill in the pull request template with a description of your changes and why they are necessary.
+
 Submit your pull request.
 
 ### 8. Keeping Your Fork Up to Date
+
 Regularly sync your fork with the main project:
+
 ```bash
 git fetch upstream git checkout main git merge upstream/main ```
 
 ### 9. Additional Guidelines
+
 Write clear and descriptive commit messages.
+
 Follow the project's coding standards.
+
 Update any documentation if necessary.
