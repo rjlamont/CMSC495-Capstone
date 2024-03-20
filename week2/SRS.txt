@@ -1,0 +1,94 @@
+# Software Requirements Specification (SRS) for the Web Game Devs Project
+
+## 1. Introduction
+
+### 1.1 Purpose
+This document specifies the software requirements for the Web Game Devs project. The project aims to develop a one-page responsive website hosted on GitHub Pages. It will feature an interactive Hangman game that focuses on programming-related words. The project emphasizes collaboration and agile methodologies, utilizing Trello for project management and Discord for team communication. 
+
+### 1.2 Document Conventions
+This document adheres to the IEEE SRS standard format to ensure clarity and consistency.
+
+### 1.3 Intended Audience and Reading Suggestions
+This SRS is intended for project team members, stakeholders, and future contributors. It guides the development of the website and the game and emphasizes the tools and methodologies employed for effective collaboration. 
+
+### 1.4 Project Scope
+The project scope encompasses developing a responsive website, creating an interactive Hangman game using Godot 4.2, focusing on programming concepts, and implementing a user-friendly interface for visitors. 
+
+## 2. Overall Description
+
+### 2.1 Project Perspective
+This one-page website is a standalone project designed to be hosted on GitHub Pages. It is intended to function across various web browsers and devices, providing a responsive and interactive user experience. The project showcases the team's development skills, integrating an educational Hangman game. To adopt agile practices, it leverages Discord for communication and Trello as a Kanban board. 
+
+### 2.2 Project Functions
+- A navigation bar for seamless access to the website's sections. 
+- An interactive Hangman game centered around programming terminology. 
+- A "Meet the Team" section with team member profiles. 
+- Utilization of Discord for continuous team communication. 
+- Adoption of Trello for agile project management and task tracking.
+
+### 2.3 User Classes and Characteristics
+- Casual web visitors interested in playing the Hangman game.
+- Team members and stakeholders are reviewing the progress of the project.
+
+### 2.4 Operating Environment
+The website is accessible through modern web browsers like Chrome, Firefox, Safari, and Edge, hosted on GitHub Pages. The development and project management tools include Godot 4.2, Discord, and Trello. 
+
+### 2.5 Design and Implementation Constraints
+- The project must be browser-compatible and responsive. 
+- Development will use Godot 4.2 and GDScript, with HTML5 for web exports. 
+- The team will use Discord for communication and Trello for project management, adhering to agile methodologies. 
+
+### 2.6 User Documentation
+The site will provide instructions for gameplay and navigation, along with detailed documentation on GitHub for development insights. 
+
+## 3. System Features
+
+### 3.1 Website Layout and Design
+
+#### 3.1.1 Description and Priority
+High priority. The website's layout and design are crucial for user engagement and accessibility.
+
+#### 3.1.2 Functional Requirements
+- FR1: The website must feature a responsive design, ensuring usability across devices and screen sizes.
+- FR2: Navigation buttons at the top of the page must allow users to smoothly scroll/jump to the desired section.
+- FR3: The "Meet the Team" section must display team members names, roles, and a short bio.
+- FR4: The game section should embed the Hangman game, allowing users to interact with it directly on the website; a placeholder image could be used initially.
+
+### 3.2 Website Content
+
+#### 3.2.1 Description and Priority
+Medium priority. Content should be engaging and informative, reflecting the team's objectives and personalities.
+
+#### 3.2.2 Functional Requirements
+- FR5: Content must be clearly written and understandable, catering to a broad audience.
+- FR6: The website should include a section describing the project's goals and the technologies used in development.
+
+## 4. External Interface Requirements
+
+### 4.1 User Interfaces
+- The website should have a visually appealing interface, color scheme, and layout that enhances readability and user experience.
+
+### 4.2 Hardware Interfaces
+- No hardware interfaces are required as the project is web-based.
+
+### 4.3 Software Interfaces
+- Web browsers: Chrome, Firefox, Safari, Edge
+- GitHub Pages for hosting
+- Development Tools: Godot Engine 4.2, VS Code
+- Languages: GDScript, HTML5, CSS3, and JavaScript.
+- Communication: Discord for team discussions and updates. 
+- Project Management: Trello for tracking progress, tasks, and agile methodologies.
+- Version Control: Git via GitHub.
+
+## 5. Other Nonfunctional Requirements
+
+### 5.1 Performance Requirements
+- The website should load within 3 seconds on standard broadband connections.
+
+### 5.2 Security Requirements
+- Basic security measures to protect against common web vulnerabilities.
+
+### 5.3 Software Quality Attributes
+- **Maintainability:** The code should be well-documented and structured for easy maintenance and future updates.
+- **Scalability:** The design should accommodate potential expansion, such as adding more games or sections.
+- **Reliability:** The website should have a high uptime, with minimal user downtime.

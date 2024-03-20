@@ -1,0 +1,80 @@
+# Game Design Document (GDD) for Programming Hangman
+
+## 1. Game Overview
+
+### 1.1 Concept
+"Programming Hangman" is an educational web game designed to teach and test players on programming terminology. Developed using Godot 4.2 and exported for the web via HTML5, the game challenges players to guess programming-related words with hints related to their usage in the programming world.
+
+### 1.2 Game Objectives
+- Engage players with interactive gameplay focused on programming concepts.
+- Educate players about different programming terms and their meanings.
+
+### 1.3 Target Audience
+Our primary audience includes students learning programming, developers interested in testing their knowledge, and anyone curious about programming.
+
+## 2. Gameplay
+
+### 2.1 Mechanics
+- Players are presented with a series of underscores representing the letters of a programming-related word.
+- Players guess letters to reveal the word. Incorrect guesses contribute to the drawing of a hangman.
+- The game provides hints related to the word's usage in programming to aid the player.
+- Successfully guessing the word before the hangman is completed rewards the player with a brief explanation of the term.
+
+### 2.2 Levels
+The game progresses through increasingly complex programming terms, starting from basic concepts and moving to more advanced terminology.
+
+### 2.3 Ending
+The game ends when players complete a set number of words or fail a certain number of times. Players are encouraged to learn more about programming through external resources provided at the end.
+
+## 3. Development
+
+### 3.1 Tools and Technologies
+- **Game Engine:** Godot 4.2
+- **Programming Language:** GDScript
+- **Graphics:** 2D sprites and text, designed within Godot or external graphic design software.
+- **Sound:** Background music and sound effects for correct or incorrect guesses.
+- **Export:** HTML5 for web integration.
+
+### 3.2 Collaboration Tools
+- **Communication:** Discord will be used for daily communication, updates, and discussions among team members.
+- **Project Management:** Trello will be our Kanban board for tracking tasks, progress, and agile development milestones.
+
+## 4. Art Style
+
+### 4.1 Graphics
+The game will feature a simple, clean, and modern 2D art style that is appealing and non-distracting. It will focus on the educational aspect of the game.
+
+### 4.2 UI/UX
+- The user interface will be intuitive, with a clear display of the word to guess, the hangman, and an on-screen keyboard for letter input.
+- Pop-ups for hints and word explanations will be designed to be informative and engaging.
+
+## 5. Sound
+
+### 5.1 Music
+Background music will be subtle and conducive to concentration and learning.
+
+### 5.2 Sound Effects
+Sound effects for letter guesses, correct or incorrect answers, and game progression cues will enhance the gameplay experience.
+
+## 6. Marketing and Monetization (Optional)
+
+### 6.1 Release Platform
+The game will be hosted on the team's GitHub Pages website and freely accessible to all users.
+
+### 6.2 Promotion
+Promotion will occur through social media, programming forums, and educational platforms to attract our target audience.
+
+## 7. Project Management
+
+### 7.1 Milestones
+- **Prototype:** A basic playable version demonstrating the core mechanics.
+- **First Playable:** Incorporation of all planned game mechanics and a set number of words.
+- **Alpha:** Integration of all programming words, hints, and explanations with essential UI/UX.
+- **Beta:** Complete the game with finalized art and sound; it is ready for testing.
+- **Launch:** Deployment on the website, with marketing efforts to follow.
+
+### 7.2 Task Allocation
+Tasks will be divided among team members based on expertise and interest, with clear assignments and deadlines managed through Trello.
+
+### 7.3 Communication
+Regular check-ins on Discord will ensure that all team members are aligned, and Trello will provide a visual representation of the project's progress.

@@ -1,0 +1,22 @@
+### **Resources**
+
+- **IEEE SRS Template/Reference**: A comprehensive guide and template for creating a Software Requirements Specification document, provided by the Institute of Electrical and Electronics Engineers. This resource is essential for understanding the structure and content needed for a professional SRS. https://ieeexplore.ieee.org/document/278253
+- **GitHub Pages**: The official site for GitHub Pages, which offers the ability to host websites directly from your GitHub repository. A fantastic solution for our project's web hosting needs. https://pages.github.com/
+- **GitHub Pages Documentation**: Detailed documentation on how to set up and manage a GitHub Pages site. This will be invaluable for our team as we deploy our project website. https://docs.github.com/en/pages
+- **GitHub Learning Lab**: An interactive learning platform offered by GitHub. It provides hands-on courses to help our team members get comfortable with GitHub's workflow and features. https://github.com/apps/github-learning-lab
+- **Introduction to GitHub**: A beginner-friendly introduction to GitHub. This resource is perfect for team members new to version control and looking to understand the basics of GitHub operations. https://skills.github.com/
+- **Godot Documentation**: The official documentation for the Godot Engine. It covers everything from basic setup to advanced features, making it a must-have for our game development efforts. [https://skills.github.com/](https://docs.godotengine.org/en/stable/index.html)
+
+### **References**
+
+Institute of Electrical and Electronics Engineers. (n.d.). *278253*. IEEE Xplore. Retrieved from https://ieeexplore.ieee.org/document/278253
+
+GitHub. (n.d.). *GitHub Pages*. Retrieved from https://pages.github.com/
+
+GitHub. (n.d.). *GitHub Pages Documentation*. Retrieved from https://docs.github.com/en/pages
+
+GitHub. (n.d.). *GitHub Learning Lab*. Retrieved from https://github.com/apps/github-learning-lab
+
+GitHub. (n.d.). *Introduction to GitHub*. Retrieved from https://skills.github.com/
+
+Godot Engine. (n.d.). *Documentation*. Retrieved from https://docs.godotengine.org/en/stable/index.html

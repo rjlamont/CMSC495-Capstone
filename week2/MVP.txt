@@ -1,0 +1,57 @@
+# MVP Document for Web Game Devs Project
+
+## 1. Purpose
+
+This MVP document outlines the essential features and functionalities that our website and Hangman game must include for the initial launch. It will guide our development process and ensure that we focus on the core aspects that deliver value to our users.
+
+## 2. MVP Definition
+
+**MVP (Minimum Viable Product)** is the version of a new product that allows the team to collect the most validated learning about customers with the least effort.
+
+## 3. Scope of MVP
+
+### Website:
+
+- Responsive design that adapts to desktop and mobile devices.
+- Navigation bar to jump between sections of the site.
+- The “Meet the Team” section has brief profiles of each member.
+- The interactive Hangman game is focused on programming concepts.
+
+### Hangman Game:
+
+- Basic gameplay mechanics allow users to guess letters of programming-related words.
+- Hints related to the programming concept of the word.
+- Simple feedback system to show correct/incorrect guesses, remaining attempts, and the solution upon completion.
+- Popup or modal window explaining the programming concept of the guessed word upon game completion.
+
+## 4. Development Priorities
+
+- **Priority 1:** Core functionality of the Hangman game (game logic, basic UI).
+- **Priority 2:** Basic website layout and responsive design.
+- **Priority 3:** Content for the “Meet the Team” section.
+- **Priority 4:** Integration of the Hangman game into the website.
+- **Priority 5:** Additional features like game score tracking, leaderboards, and more detailed user feedback are considered beyond MVP and will be developed in subsequent iterations.
+
+## 5. Tools and Technologies
+
+- **Game Development:** Godot 4.2 uses GDScript and is exported to the web via HTML5.
+- **Website Development:** HTML, CSS, JavaScript for front-end development.
+- **Project Management:** Trello for task management and agile development.
+- **Communication:** Discord for team discussions and updates.
+
+## 6. Milestones
+
+- **Milestone 1:** Game Concept and Logic Development
+- **Milestone 2:** Basic Website Structure and Design
+- **Milestone 3:** Hangman Game Development and Testing
+- **Milestone 4:** Website and Game Integration
+- **Milestone 5:** MVP Launch
+
+## 7. Success Criteria
+
+The MVP will be considered successful if it:
+
+- Is fully functional on significant web browsers.
+- Provides an engaging user experience.
+- Educates users on programming concepts through gameplay.
+- Encourages users to learn more about the team and project.
