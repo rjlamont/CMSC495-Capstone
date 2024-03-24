@@ -3,13 +3,13 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-This document specifies the software requirements for the Web Game Devs project. The project aims to develop a one-page responsive website hosted on GitHub Pages. It will feature an interactive Hangman game that focuses on programming-related words. The project emphasizes collaboration and agile methodologies, utilizing Trello for project management and Discord for team communication. 
+This document specifies the software requirements for the Web Game Devs project. The project aims to develop a responsive website hosted on GitHub Pages. It will feature an interactive Hangman game that incorporates programming-related words. The project emphasizes collaboration and agile methodologies, utilizing Trello for project management and Discord for team communication. 
 
 ### 1.2 Document Conventions
 This document adheres to the IEEE SRS standard format to ensure clarity and consistency.
 
 ### 1.3 Intended Audience and Reading Suggestions
-This SRS is intended for project team members, stakeholders, and future contributors. It guides the development of the website and the game and emphasizes the tools and methodologies employed for effective collaboration. 
+This SRS is intended for project team members and stakeholders. It guides the development of the website and the game that will be embedded in the site. It emphasizes the tools and methodologies employed for effective collaboration. 
 
 ### 1.4 Project Scope
 The project scope encompasses developing a responsive website, creating an interactive Hangman game using Godot 4.2, focusing on programming concepts, and implementing a user-friendly interface for visitors. 
@@ -17,14 +17,15 @@ The project scope encompasses developing a responsive website, creating an inter
 ## 2. Overall Description
 
 ### 2.1 Project Perspective
-This one-page website is a standalone project designed to be hosted on GitHub Pages. It is intended to function across various web browsers and devices, providing a responsive and interactive user experience. The project showcases the team's development skills, integrating an educational Hangman game. To adopt agile practices, it leverages Discord for communication and Trello as a Kanban board. 
+This website is a standalone project designed to be hosted on GitHub Pages. It is intended to function across various web browsers and devices, providing a responsive and interactive user experience. The project showcases the team's development skills, integrating an educational Hangman game. It leverages Discord for communication and Trello as a Kanban board to adopt agile practices. 
 
 ### 2.2 Project Functions
 - A navigation bar for seamless access to the website's sections. 
 - An interactive Hangman game centered around programming terminology. 
-- A "Meet the Team" section with team member profiles. 
+- A "Meet the Team" section with member profiles and information. 
 - Utilization of Discord for continuous team communication. 
 - Adoption of Trello for agile project management and task tracking.
+- There is a possibility of adding additional pages for additional games, time permitting.
 
 ### 2.3 User Classes and Characteristics
 - Casual web visitors interested in playing the Hangman game.
@@ -35,8 +36,10 @@ The website is accessible through modern web browsers like Chrome, Firefox, Safa
 
 ### 2.5 Design and Implementation Constraints
 - The project must be browser-compatible and responsive. 
-- Development will use Godot 4.2 and GDScript, with HTML5 for web exports. 
-- The team will use Discord for communication and Trello for project management, adhering to agile methodologies. 
+- Development for the Game will use Godot 4.2 and GDScript, with HTML5 for web export/embed. 
+- The team will use Discord for communication
+- The team will use Trello for project management, adhering to agile methodologies. 
+- The team will use GitHub for version and source control.
 
 ### 2.6 User Documentation
 The site will provide instructions for gameplay and navigation, along with detailed documentation on GitHub for development insights. 
@@ -50,9 +53,9 @@ High priority. The website's layout and design are crucial for user engagement a
 
 #### 3.1.2 Functional Requirements
 - FR1: The website must feature a responsive design, ensuring usability across devices and screen sizes.
-- FR2: Navigation buttons at the top of the page must allow users to smoothly scroll/jump to the desired section.
-- FR3: The "Meet the Team" section must display team members names, roles, and a short bio.
-- FR4: The game section should embed the Hangman game, allowing users to interact with it directly on the website; a placeholder image could be used initially.
+- FR2: The navigation buttons at the top of the page must allow users to smoothly scroll to the desired section and/or page.
+- FR3: The "Meet the Team" section must display team members' names, roles, and a short bio (a photo is optional).
+- FR4: The game section should embed the Hangman game, allowing users to interact with it directly on the website. Initially, a placeholder image could be used.
 
 ### 3.2 Website Content
 
@@ -83,7 +86,7 @@ Medium priority. Content should be engaging and informative, reflecting the team
 ## 5. Other Nonfunctional Requirements
 
 ### 5.1 Performance Requirements
-- The website should load within 3 seconds on standard broadband connections.
+- The website should load within 3 seconds on standard broadband connections. (GitHub hosting permitting (could be slower if their end is under heavy load))
 
 ### 5.2 Security Requirements
 - Basic security measures to protect against common web vulnerabilities.

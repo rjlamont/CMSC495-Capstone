@@ -1,30 +1,31 @@
 # Week 2 Project Goals and Milestones for The Web Game Devs
 
-This week, our team focused on laying the groundwork for our project. We aim to create a responsive, one-page website featuring an interactive Hangman game centered on programming concepts. Below I broke it down following similar SDLC processes that I have used previously for various projects in the industry, I included an Software Requirement Specifications (SRS) document for the web design portion (following IEEE’s template), and Game Development Document (GDD) for the game development, as well as a Minimum Viable Product (MVP) sheet.  
+**Team Members:** Charles Bostwick, Jade Pearl, Ada Truong, Robyn LaMontagne, Holland Brawner
 
-## Key Milestones:
+This week, our team focused on laying the groundwork for our project. We aim to create a responsive, one-page website featuring an interactive Hangman game centered on programming concepts. Below, I broke it down following similar SDLC processes that I have used previously for various projects in the industry; I included a Software Requirement Specifications (SRS) document for the web design portion (following IEEE’s template) and a Game Development Document (GDD) for the game development, as well as a Minimum Viable Product (MVP) sheet.
+
+I provided the initial layout to our team in Discord and via GitHub so that we could collaborate and review it. After discussing with the team on Discord and using Trello, we collectively created a roadmap for this project. Below is an image of our Trello board
+
+We then took the team's feedback in our Discord channels and discussions to implement the changes and recommendations to finalize the initial draft based on an IEEE template for the SRS. Below, we have broken it down to align with the assignment rubric and the post requirements for the class. We have our Key Milestones, the discussed SRS, GDD, and MVP documents, and some of the references and documentation we will be using at the end in APA formatting.
+
+## **Key Milestones:**
 
 1. Requirements and Documentation:
 - Finalize and review the Software Requirements Specification (SRS) and Game Design Document (GDD), incorporating our MVP (Minimum Viable Product) strategy. (Charles leads, with contributions from all members for feedback.)
 1. Development Environment Setup:
 - Establish the development environment with Godot 4.2 and configure the tools for HTML5 web export. (Charles and Jade)
 - Create a GitHub repository for version control and collaboration on the project. (Charles will initialize it, and everyone will clone and set it up in VSCode.)
-- Use Trello board for agile project management, defining our workflow and initial tasks. (Start breaking down the weeks for the project to set deadlines and goals.)
+- We use the Trello board for agile project management, defining our workflow and initial tasks. (Start breaking down the weeks for the project to set deadlines and goals.)
+- Determine if additional milestones, such as writing tests and deploying the website on GitHub Pages, are necessary.
 1. Initial Game and Website Development:
 - Start developing the Hangman game in GDScript, emphasizing core mechanics and the programming-related word database. (Jade/ Charles)
 - Begin designing and coding the website's layout, ensuring responsiveness and including placeholders for the game, team information, and other relevant sections. (Robyn, Ada, and Holland focus on website layout design.)
+- Discuss the potential inclusion of multiple pages in the website structure and the necessity of a navigation bar.
 1. Design Considerations:
 - Decide on a cohesive color palette for the website and game to ensure a unified look and feel. (Ada leads the design choice, with input from Jade and Robyn.)
 1. Team Collaboration and Communication:
 - Regularly communicate through Discord to stay updated on progress and hurdles. (Everyone)
 - Update the Trello board consistently to reflect the current status of tasks and upcoming priorities. (Everyone)
+- Consider integrating Google Drive or Microsoft 365 for collaborative editing of documents, ensuring adherence to APA formatting guidelines.
 1. Technical Setup Guide:
 - Compile a guide for team members using GitHub with Visual Studio Code for efficient version control and collaboration. (Charles will draft.)
-
-## Specific Requirements and Scenarios:
-
-- The game will actively engage users by challenging them to guess programming-related terms, with hints about their functions in the programming world. Successfully guessing a word triggers a popup explaining the term's significance, adding an educational layer to the game.
-
-## System Specifications:
-
-- Development focuses on Godot 4.2 for game programming and standard web technologies (HTML, CSS, JavaScript) for the website. We advise users to access our product using up-to-date web browsers on devices capable of efficiently running HTML5 content for an optimal experience

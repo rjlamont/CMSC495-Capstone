@@ -12,7 +12,7 @@ This MVP document outlines the essential features and functionalities that our w
 
 ### Website:
 
-- Responsive design that adapts to desktop and mobile devices.
+- Responsive one-page design that adapts to desktop and mobile devices.
 - Navigation bar to jump between sections of the site.
 - The “Meet the Team” section has brief profiles of each member.
 - The interactive Hangman game is focused on programming concepts.
