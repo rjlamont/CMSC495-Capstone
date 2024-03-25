@@ -21,7 +21,7 @@ Our primary audience includes students learning programming, developers interest
 - Successfully guessing the word before the hangman is completed rewards the player with a brief explanation of the term.
 
 ### 2.2 Levels
-The game progresses through increasingly complex programming terms, starting from basic concepts and moving to more advanced terminology.
+The game progresses through increasingly complex programming terms, starting from basic concepts and moving to more advanced terminology. The words can be randomly generated based off of "difficulty" level or value assigned to the word/concept/terminology.
 
 ### 2.3 Ending
 The game ends when players complete a set number of words or fail a certain number of times. Players are encouraged to learn more about programming through external resources provided at the end.
