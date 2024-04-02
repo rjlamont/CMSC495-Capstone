@@ -1,0 +1,25 @@
+.header {
+    position: relative;
+    float: right; 
+     
+}
+
+.homepage {
+    position: relative;
+    top: 200px;
+    text-align: center;
+}
+
+.back button {
+    position: relative;
+    float: left;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+}
+
+.profile {
+    height: 300px;
+}
