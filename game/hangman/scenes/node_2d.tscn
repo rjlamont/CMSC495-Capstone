@@ -1,6 +1,222 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpxn0p60w0kbd"]
+[gd_scene load_steps=8 format=3 uid="uid://dfite847n6igs"]
 
-[ext_resource type="Script" path="res://scripts/hangman.gd" id="1_n63tm"]
+[ext_resource type="Texture2D" uid="uid://cvo3tr30dt1cs" path="res://assets/images/HangmanPole.png" id="1_4waj1"]
+[ext_resource type="Texture2D" uid="uid://ccl7ip2i1qgae" path="res://assets/images/head.png" id="2_6s0hf"]
+[ext_resource type="Texture2D" uid="uid://ctqft3ouguljb" path="res://assets/images/body.png" id="3_eomuw"]
+[ext_resource type="Texture2D" uid="uid://8avvfjvqfv8k" path="res://assets/images/limb.png" id="4_ayjk8"]
+[ext_resource type="FontFile" uid="uid://delcm1c1fa0k2" path="res://assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="5_c154u"]
+[ext_resource type="Texture2D" uid="uid://chwavtfgs1boa" path="res://assets/images/back.png" id="6_stuvn"]
+[ext_resource type="Texture2D" uid="uid://cbvmkvc1w35nf" path="res://assets/images/blank.png" id="7_gh4ta"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_n63tm")
+
+[node name="BackButton" type="LinkButton" parent="."]
+offset_left = 187.0
+offset_top = 26.0
+offset_right = 239.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_c154u")
+text = "Back"
+metadata/_edit_group_ = true
+
+[node name="Back" type="Sprite2D" parent="BackButton"]
+position = Vector2(-33, 9)
+scale = Vector2(0.0854492, 0.0859375)
+texture = ExtResource("6_stuvn")
+metadata/_edit_group_ = true
+
+[node name="HangmanPole" type="Sprite2D" parent="."]
+position = Vector2(231.25, 338.875)
+scale = Vector2(0.205017, 0.169977)
+texture = ExtResource("1_4waj1")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(329, 270)
+scale = Vector2(0.0559829, 0.0524361)
+texture = ExtResource("2_6s0hf")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(333, 396)
+rotation = -0.876924
+scale = Vector2(0.180286, 0.165801)
+texture = ExtResource("3_eomuw")
+
+[node name="Arm1" type="Sprite2D" parent="."]
+position = Vector2(300, 370)
+rotation = -0.765014
+scale = Vector2(0.445182, 0.190691)
+texture = ExtResource("4_ayjk8")
+
+[node name="Arm2" type="Sprite2D" parent="."]
+position = Vector2(354, 371)
+rotation = -2.3966
+scale = Vector2(0.445182, 0.190691)
+texture = ExtResource("4_ayjk8")
+flip_v = true
+
+[node name="Leg1" type="Sprite2D" parent="."]
+position = Vector2(300, 493)
+rotation = -0.765014
+scale = Vector2(0.445182, 0.190691)
+texture = ExtResource("4_ayjk8")
+
+[node name="Leg2" type="Sprite2D" parent="."]
+position = Vector2(353, 493)
+rotation = -2.37256
+scale = Vector2(0.445182, 0.190691)
+texture = ExtResource("4_ayjk8")
+flip_v = true
+
+[node name="Blank" type="Sprite2D" parent="."]
+position = Vector2(490.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank2" type="Sprite2D" parent="."]
+position = Vector2(534.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank3" type="Sprite2D" parent="."]
+position = Vector2(578.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank4" type="Sprite2D" parent="."]
+position = Vector2(622.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank5" type="Sprite2D" parent="."]
+position = Vector2(666.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank6" type="Sprite2D" parent="."]
+position = Vector2(710.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank7" type="Sprite2D" parent="."]
+position = Vector2(754.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank8" type="Sprite2D" parent="."]
+position = Vector2(799.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank9" type="Sprite2D" parent="."]
+position = Vector2(844.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank10" type="Sprite2D" parent="."]
+position = Vector2(889.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank11" type="Sprite2D" parent="."]
+position = Vector2(934.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank12" type="Sprite2D" parent="."]
+position = Vector2(979.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank13" type="Sprite2D" parent="."]
+position = Vector2(1024.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank14" type="Sprite2D" parent="."]
+position = Vector2(1070.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank15" type="Sprite2D" parent="."]
+position = Vector2(1114.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank16" type="Sprite2D" parent="."]
+position = Vector2(490, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank17" type="Sprite2D" parent="."]
+position = Vector2(535, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank18" type="Sprite2D" parent="."]
+position = Vector2(579, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank19" type="Sprite2D" parent="."]
+position = Vector2(624, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank20" type="Sprite2D" parent="."]
+position = Vector2(668, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank21" type="Sprite2D" parent="."]
+position = Vector2(712, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank22" type="Sprite2D" parent="."]
+position = Vector2(757, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank23" type="Sprite2D" parent="."]
+position = Vector2(802, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank24" type="Sprite2D" parent="."]
+position = Vector2(847, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank25" type="Sprite2D" parent="."]
+position = Vector2(893, 216)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="FirstWord" type="RichTextLabel" parent="."]
+offset_left = 536.0
+offset_top = 105.0
+offset_right = 1102.0
+offset_bottom = 145.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "FIRST WORD AREA. LONGEST FIRST WORD WON'T EXCEED 15 CHARS"
+
+[node name="SecondWord" type="RichTextLabel" parent="."]
+offset_left = 474.0
+offset_top = 177.0
+offset_right = 1040.0
+offset_bottom = 217.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "SECOND WORD AREA. LONGEST SECOND WORD WON'T EXCEED 10 CHARS"
+
+[node name="SecondWord2" type="RichTextLabel" parent="."]
+offset_left = 971.0
+offset_top = 14.0
+offset_right = 1138.0
+offset_bottom = 54.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "CMSC 495 Capstone"
