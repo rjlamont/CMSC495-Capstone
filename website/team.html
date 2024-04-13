@@ -7,38 +7,71 @@
         <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
-        <div class="back button">
-            <a href="homepage.html"><img src="backbutton.png" alt="Back button"
-                style="width:200px;height:50px;margin-right:75%;"></a>
-        </div>
-        <div class="header">
+        <header>
             <p>UMGC CMSC 495</p>
-        </div>
-        <h1 style="text-align:center;">Meet the Team</h1>
-        <img src="profile.jpeg" alt="Profile picture" style="width:200px;height:200px;">
-        <div class="profile">
-            <h2>Charles Boswick | Title</h2>
-            <p>bio here...</p>
-        </div>
-        <img src="profile.jpeg" alt="Profile picture" style="width:200px;height:200px;">
-        <div class="profile">
-            <h2>Jade Pearl | Title</h2>
-            <p>bio here...</p>
-        </div>
-        <img src="profile.jpeg" alt="Profile picture" style="width:200px;height:200px;">
-        <div class="profile">
-            <h2>Ada Truong | Title</h2>
-            <p>bio here...</p>
-        </div>
-        <img src="profile.jpeg" alt="Profile picture" style="width:200px;height:200px;">
-        <div class="profile">
-            <h2>Holland Brawner | Title</h2>
-            <p>bio here...</p>
-        </div>
-        <img src="profile.jpeg" alt="Profile picture" style="width:200px;height:200px;">
-        <div class="profile">
-            <h2>Robyn Cohen | Title</h2>
-            <p>bio here...</p>
-        </div>
+        </header>
+        <a class="back" href="homepage.html">
+            <img src="back-arrow.svg" alt="Back button">
+            <p>Back</p>
+        </a>
+        <h1 class="meet-the-team">Meet the Team</h1>
+        <main class="profiles">
+            <button class="toggle-profile" data-id="CB">
+                <p>Charles Bostwick</p>
+                <img src="down-arrow.svg" alt="Expand/collapse profile" data-id="CB">
+            </button>
+            <div class="profile" data-id="CB">
+                <img src="profile.jpeg" alt="Profile picture of Charles Bostwick" style="width:200px;height:200px;">
+                <div class="profile-info">
+                    <h2><span class="repeat-name">Charles Bostwick | </span>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <button class="toggle-profile" data-id="JP">
+                <p>Jade Pearl</p>
+                <img src="down-arrow.svg" alt="Expand/collapse profile" data-id="JP">
+            </button>
+            <div class="profile" data-id="JP">
+                <img src="profile.jpeg" alt="Profile picture of Jade Pearl" style="width:200px;height:200px;">
+                <div class="profile-info">
+                    <h2><span class="repeat-name">Jade Pearl | </span>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <button class="toggle-profile" data-id="AT">
+                <p>Ada Truong</p>
+                <img src="down-arrow.svg" alt="Expand/collapse profile" data-id="AT">
+            </button>
+            <div class="profile" data-id="AT">
+                <img src="profile.jpeg" alt="Profile picture of Ada Truong" style="width:200px;height:200px;">
+                <div class="profile-info">
+                    <h2><span class="repeat-name">Ada Truong | </span>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <button class="toggle-profile" data-id="HB">
+                <p>Holland Brawner</p>
+                <img src="down-arrow.svg" alt="Expand/collapse profile" data-id="HB">
+            </button>
+            <div class="profile" data-id="HB">
+                <img src="profile.jpeg" alt="Profile picture of Holland Brawner" style="width:200px;height:200px;">
+                <div class="profile-info">
+                    <h2><span class="repeat-name">Holland Brawner | </span>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <button class="toggle-profile" data-id="RC">
+                <p>Robyn Cohen</p>
+                <img src="down-arrow.svg" alt="Expand/collapse profile" data-id="RC">
+            </button>
+            <div class="profile" data-id="RC">
+                <img src="profile.jpeg" alt="Profile picture of Robyn Cohen" style="width:200px;height:200px;">
+                <div class="profile-info">
+                    <h2><span class="repeat-name">Robyn Cohen | </span>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </main>
+        <script src="team.js"></script>
     </body>
 </html>
