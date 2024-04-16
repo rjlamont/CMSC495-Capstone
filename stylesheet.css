@@ -21,7 +21,6 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 10px;
     font-weight: normal
 }
 
@@ -95,6 +94,39 @@ button, .start-game {
 
 /*//////////////////////////// DESKTOP STYLES //////////////////////*/
 /* insert desktop styles here */
+h1 {
+    font-size: 6.5rem;
+}
+
+/* Homepage styles */
+.start-game {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding: 2rem 2.5rem;
+    font-size: 1.5rem;
+}
+
+.meet-the-team {
+    font-size: 1.5rem;
+}
+
+/* Meet the Team styles */
+h1.meet-the-team {
+    font-size: 3.5rem;
+    margin: 3rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+img {
+    float: left;
+}
+
+.profile-info {
+    padding: 2rem;
+}
 
 /*/////////////////////////// TABLET STYLES ////////////////////////*/
 @media only screen and (max-width: 900px) {

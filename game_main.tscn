@@ -1,0 +1,812 @@
+[gd_scene load_steps=13 format=3 uid="uid://dfite847n6igs"]
+
+[ext_resource type="Texture2D" uid="uid://cvo3tr30dt1cs" path="res://assets/images/HangmanPole.png" id="1_4waj1"]
+[ext_resource type="Script" path="res://scenes/keyboard.gd" id="1_ad8ha"]
+[ext_resource type="Texture2D" uid="uid://ccl7ip2i1qgae" path="res://assets/images/head.png" id="2_6s0hf"]
+[ext_resource type="Texture2D" uid="uid://ctqft3ouguljb" path="res://assets/images/body.png" id="3_eomuw"]
+[ext_resource type="Texture2D" uid="uid://8avvfjvqfv8k" path="res://assets/images/limb.png" id="4_ayjk8"]
+[ext_resource type="FontFile" uid="uid://delcm1c1fa0k2" path="res://assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="6_fxo1g"]
+[ext_resource type="Texture2D" uid="uid://cbvmkvc1w35nf" path="res://assets/images/blank.png" id="7_gh4ta"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ebrp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y1tq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yngu"]
+bg_color = Color(0, 0, 0, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ya3lg"]
+shadow_color = Color(0.352941, 0.352941, 0.352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3l8b"]
+
+[node name="Node2D" type="Node2D"]
+material = SubResource("ShaderMaterial_2ebrp")
+script = ExtResource("1_ad8ha")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 646.0
+
+[node name="HangmanPole" type="Sprite2D" parent="."]
+position = Vector2(225, 364)
+scale = Vector2(0.205017, 0.169977)
+texture = ExtResource("1_4waj1")
+
+[node name="Head" type="Sprite2D" parent="HangmanPole"]
+position = Vector2(476.79, -405.202)
+scale = Vector2(0.273065, 0.308489)
+texture = ExtResource("2_6s0hf")
+
+[node name="Body" type="Sprite2D" parent="HangmanPole"]
+position = Vector2(496.3, 336.075)
+rotation = -0.967023
+scale = Vector2(0.990527, 0.880724)
+skew = 0.183298
+texture = ExtResource("3_eomuw")
+
+[node name="Arm1" type="Sprite2D" parent="HangmanPole"]
+position = Vector2(335.338, 183.113)
+rotation = -0.858462
+scale = Vector2(2.39659, 1.03435)
+skew = 0.18619
+texture = ExtResource("4_ayjk8")
+
+[node name="Arm2" type="Sprite2D" parent="HangmanPole"]
+position = Vector2(598.731, 188.996)
+rotation = -2.30303
+scale = Vector2(2.38763, 1.03814)
+skew = -0.185748
+texture = ExtResource("4_ayjk8")
+flip_v = true
+
+[node name="Leg1" type="Sprite2D" parent="HangmanPole"]
+position = Vector2(335.338, 906.74)
+rotation = -0.858462
+scale = Vector2(2.39659, 1.03435)
+skew = 0.18619
+texture = ExtResource("4_ayjk8")
+
+[node name="Leg2" type="Sprite2D" parent="HangmanPole"]
+position = Vector2(593.853, 906.74)
+rotation = -2.27915
+scale = Vector2(2.39839, 1.03358)
+skew = -0.186244
+texture = ExtResource("4_ayjk8")
+flip_v = true
+
+[node name="Blank" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(490.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank2" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(217.284, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank3" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(434.568, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank4" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(651.852, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank5" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(869.136, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank6" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1086.42, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank7" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1303.7, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank8" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1525.93, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank9" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1748.15, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank10" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1970.37, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank11" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(2192.59, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank12" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(2414.81, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank13" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(2637.04, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank14" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(2864.2, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank15" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(3081.48, 0)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank16" type="Sprite2D" parent="Blank"]
+position = Vector2(-1.23438, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank17" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(220.988, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank18" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(438.272, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank19" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(660.494, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank20" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(877.778, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank21" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1095.06, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank22" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1317.28, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank23" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1539.51, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank24" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1761.73, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="Blank25" type="Sprite2D" parent="Blank"]
+visible = false
+position = Vector2(1988.89, 174.214)
+texture = ExtResource("7_gh4ta")
+
+[node name="FirstWord" type="RichTextLabel" parent="."]
+offset_left = 536.0
+offset_top = 105.0
+offset_right = 1102.0
+offset_bottom = 145.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "FIRST WORD AREA. LONGEST FIRST WORD WON'T EXCEED 15 CHARS"
+
+[node name="SecondWord" type="RichTextLabel" parent="."]
+offset_left = 474.0
+offset_top = 177.0
+offset_right = 1040.0
+offset_bottom = 217.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "SECOND WORD AREA. LONGEST SECOND WORD WON'T EXCEED 10 CHARS"
+
+[node name="Letters" type="HBoxContainer" parent="."]
+offset_left = 514.0
+offset_top = 282.0
+offset_right = 1029.0
+offset_bottom = 602.0
+size_flags_stretch_ratio = 0.83
+theme_override_constants/separation = 38
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Letters"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonA" type="Button" parent="Letters/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "A"
+
+[node name="ButtonG" type="Button" parent="Letters/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "G"
+
+[node name="ButtonM" type="Button" parent="Letters/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "M"
+
+[node name="ButtonS" type="Button" parent="Letters/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 1.43
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "S"
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="Letters"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonB" type="Button" parent="Letters/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "B"
+
+[node name="ButtonH" type="Button" parent="Letters/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "H"
+
+[node name="ButtonN" type="Button" parent="Letters/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "N"
+
+[node name="ButtonT" type="Button" parent="Letters/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "T"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Letters"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonC" type="Button" parent="Letters/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "C"
+
+[node name="ButtonI" type="Button" parent="Letters/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "I"
+
+[node name="ButtonO" type="Button" parent="Letters/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "O"
+
+[node name="ButtonU" type="Button" parent="Letters/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "U"
+
+[node name="ButtonY" type="Button" parent="Letters/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "Y"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Letters"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonD" type="Button" parent="Letters/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "D"
+
+[node name="ButtonJ" type="Button" parent="Letters/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "J"
+
+[node name="ButtonP" type="Button" parent="Letters/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "P"
+
+[node name="ButtonV" type="Button" parent="Letters/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "V"
+
+[node name="ButtonZ" type="Button" parent="Letters/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "Z"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Letters"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonE" type="Button" parent="Letters/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "E"
+
+[node name="ButtonK" type="Button" parent="Letters/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "K"
+
+[node name="ButtonQ" type="Button" parent="Letters/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "Q"
+
+[node name="ButtonW" type="Button" parent="Letters/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 1.43
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "W"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="Letters"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonF" type="Button" parent="Letters/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "F"
+
+[node name="ButtonL" type="Button" parent="Letters/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "L"
+
+[node name="ButtonR" type="Button" parent="Letters/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "R"
+
+[node name="ButtonX" type="Button" parent="Letters/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 1.43
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y1tq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
+text = "X"
+
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonG" to="." method="_on_button_g_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonM" to="." method="_on_button_m_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonS" to="." method="_on_button_s_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonH" to="." method="_on_button_h_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonN" to="." method="_on_button_n_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonT" to="." method="_on_button_t_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonC" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonI" to="." method="_on_button_i_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonO" to="." method="_on_button_o_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonU" to="." method="_on_button_u_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonY" to="." method="_on_button_y_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonD" to="." method="_on_button_d_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonJ" to="." method="_on_button_j_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonP" to="." method="_on_button_p_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonV" to="." method="_on_button_v_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonZ" to="." method="_on_button_z_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonE" to="." method="_on_button_e_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonK" to="." method="_on_button_k_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonQ" to="." method="_on_button_q_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonW" to="." method="_on_button_w_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonF" to="." method="_on_button_f_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonL" to="." method="_on_button_l_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonR" to="." method="_on_button_r_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonX" to="." method="_on_button_x_pressed"]
