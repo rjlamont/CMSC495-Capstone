@@ -83,7 +83,6 @@ texture = ExtResource("4_ayjk8")
 flip_v = true
 
 [node name="Blank" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(490.25, 146.75)
 scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
@@ -216,10 +215,10 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "FIRST WORD AREA. LONGEST FIRST WORD WON'T EXCEED 15 CHARS"
 
 [node name="SecondWord" type="RichTextLabel" parent="."]
-offset_left = 474.0
-offset_top = 177.0
-offset_right = 1040.0
-offset_bottom = 217.0
+offset_left = 473.0
+offset_top = 166.0
+offset_right = 1039.0
+offset_bottom = 206.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "SECOND WORD AREA. LONGEST SECOND WORD WON'T EXCEED 10 CHARS"
 
