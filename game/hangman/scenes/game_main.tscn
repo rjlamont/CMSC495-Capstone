@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dfite847n6igs"]
+[gd_scene load_steps=13 format=3 uid="uid://dfite847n6igs"]
 
 [ext_resource type="Texture2D" uid="uid://cvo3tr30dt1cs" path="res://assets/images/HangmanPole.png" id="1_4waj1"]
+[ext_resource type="Script" path="res://scenes/keyboard.gd" id="1_ad8ha"]
 [ext_resource type="Texture2D" uid="uid://ccl7ip2i1qgae" path="res://assets/images/head.png" id="2_6s0hf"]
 [ext_resource type="Texture2D" uid="uid://ctqft3ouguljb" path="res://assets/images/body.png" id="3_eomuw"]
 [ext_resource type="Texture2D" uid="uid://8avvfjvqfv8k" path="res://assets/images/limb.png" id="4_ayjk8"]
@@ -28,6 +29,7 @@ shadow_color = Color(0.352941, 0.352941, 0.352941, 1)
 
 [node name="Node2D" type="Node2D"]
 material = SubResource("ShaderMaterial_2ebrp")
+script = ExtResource("1_ad8ha")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1151.0
@@ -234,7 +236,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="Letters/VBoxContainer"]
+[node name="ButtonA" type="Button" parent="Letters/VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -254,7 +256,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "A"
 
-[node name="Button2" type="Button" parent="Letters/VBoxContainer"]
+[node name="ButtonG" type="Button" parent="Letters/VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -274,7 +276,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "G"
 
-[node name="Button3" type="Button" parent="Letters/VBoxContainer"]
+[node name="ButtonM" type="Button" parent="Letters/VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -294,7 +296,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "M"
 
-[node name="Button4" type="Button" parent="Letters/VBoxContainer"]
+[node name="ButtonS" type="Button" parent="Letters/VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_stretch_ratio = 1.43
@@ -320,7 +322,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="Letters/VBoxContainer1"]
+[node name="ButtonB" type="Button" parent="Letters/VBoxContainer1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -340,7 +342,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "B"
 
-[node name="Button2" type="Button" parent="Letters/VBoxContainer1"]
+[node name="ButtonH" type="Button" parent="Letters/VBoxContainer1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -360,7 +362,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "H"
 
-[node name="Button3" type="Button" parent="Letters/VBoxContainer1"]
+[node name="ButtonN" type="Button" parent="Letters/VBoxContainer1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -380,7 +382,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "N"
 
-[node name="Button4" type="Button" parent="Letters/VBoxContainer1"]
+[node name="ButtonT" type="Button" parent="Letters/VBoxContainer1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -405,7 +407,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="Letters/VBoxContainer2"]
+[node name="ButtonC" type="Button" parent="Letters/VBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -425,7 +427,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "C"
 
-[node name="Button2" type="Button" parent="Letters/VBoxContainer2"]
+[node name="ButtonI" type="Button" parent="Letters/VBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -445,7 +447,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "I"
 
-[node name="Button3" type="Button" parent="Letters/VBoxContainer2"]
+[node name="ButtonO" type="Button" parent="Letters/VBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -465,7 +467,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "O"
 
-[node name="Button4" type="Button" parent="Letters/VBoxContainer2"]
+[node name="ButtonU" type="Button" parent="Letters/VBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -485,7 +487,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "U"
 
-[node name="Button5" type="Button" parent="Letters/VBoxContainer2"]
+[node name="ButtonY" type="Button" parent="Letters/VBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -510,7 +512,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="Letters/VBoxContainer3"]
+[node name="ButtonD" type="Button" parent="Letters/VBoxContainer3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -530,7 +532,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "D"
 
-[node name="Button2" type="Button" parent="Letters/VBoxContainer3"]
+[node name="ButtonJ" type="Button" parent="Letters/VBoxContainer3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -550,7 +552,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "J"
 
-[node name="Button3" type="Button" parent="Letters/VBoxContainer3"]
+[node name="ButtonP" type="Button" parent="Letters/VBoxContainer3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -570,7 +572,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "P"
 
-[node name="Button4" type="Button" parent="Letters/VBoxContainer3"]
+[node name="ButtonV" type="Button" parent="Letters/VBoxContainer3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -590,7 +592,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "V"
 
-[node name="Button5" type="Button" parent="Letters/VBoxContainer3"]
+[node name="ButtonZ" type="Button" parent="Letters/VBoxContainer3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -615,7 +617,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="Letters/VBoxContainer4"]
+[node name="ButtonE" type="Button" parent="Letters/VBoxContainer4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -635,7 +637,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "E"
 
-[node name="Button2" type="Button" parent="Letters/VBoxContainer4"]
+[node name="ButtonK" type="Button" parent="Letters/VBoxContainer4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -655,7 +657,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "K"
 
-[node name="Button3" type="Button" parent="Letters/VBoxContainer4"]
+[node name="ButtonQ" type="Button" parent="Letters/VBoxContainer4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -675,7 +677,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "Q"
 
-[node name="Button4" type="Button" parent="Letters/VBoxContainer4"]
+[node name="ButtonW" type="Button" parent="Letters/VBoxContainer4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_stretch_ratio = 1.43
@@ -701,7 +703,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="Letters/VBoxContainer5"]
+[node name="ButtonF" type="Button" parent="Letters/VBoxContainer5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -721,7 +723,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "F"
 
-[node name="Button2" type="Button" parent="Letters/VBoxContainer5"]
+[node name="ButtonL" type="Button" parent="Letters/VBoxContainer5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -741,7 +743,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "L"
 
-[node name="Button3" type="Button" parent="Letters/VBoxContainer5"]
+[node name="ButtonR" type="Button" parent="Letters/VBoxContainer5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -761,7 +763,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "R"
 
-[node name="Button4" type="Button" parent="Letters/VBoxContainer5"]
+[node name="ButtonX" type="Button" parent="Letters/VBoxContainer5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_stretch_ratio = 1.43
@@ -781,3 +783,30 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "X"
+
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonG" to="." method="_on_button_g_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonM" to="." method="_on_button_m_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer/ButtonS" to="." method="_on_button_s_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonH" to="." method="_on_button_h_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonN" to="." method="_on_button_n_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer1/ButtonT" to="." method="_on_button_t_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonC" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonI" to="." method="_on_button_i_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonO" to="." method="_on_button_o_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonU" to="." method="_on_button_u_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer2/ButtonY" to="." method="_on_button_y_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonD" to="." method="_on_button_d_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonJ" to="." method="_on_button_j_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonP" to="." method="_on_button_p_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonV" to="." method="_on_button_v_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer3/ButtonZ" to="." method="_on_button_z_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonE" to="." method="_on_button_e_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonK" to="." method="_on_button_k_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonQ" to="." method="_on_button_q_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer4/ButtonW" to="." method="_on_button_w_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonF" to="." method="_on_button_f_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonL" to="." method="_on_button_l_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonR" to="." method="_on_button_r_pressed"]
+[connection signal="pressed" from="Letters/VBoxContainer5/ButtonX" to="." method="_on_button_x_pressed"]
