@@ -120,6 +120,11 @@ h2 {
     font-size: 2rem;
 }
 
+.repeat-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 img {
     float: left;
 }
