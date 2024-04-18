@@ -1,0 +1,38 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://delcm1c1fa0k2"
+path="res://.godot/imported/JetBrainsMono-VariableFont_wght.ttf-a0a2a22b6202f3da3e1d7118fbf3dd7e.fontdata"
+
+[deps]
+
+source_file="res://Assets/fonts/JetBrainsMono-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/JetBrainsMono-VariableFont_wght.ttf-a0a2a22b6202f3da3e1d7118fbf3dd7e.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}
