@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://82wbchi1ii5c"]
+
+[ext_resource type="Texture2D" uid="uid://cvo3tr30dt1cs" path="res://assets/images/HangmanPole.png" id="1_a0cch"]
+[ext_resource type="Texture2D" uid="uid://ccl7ip2i1qgae" path="res://assets/images/head.png" id="2_4p5hf"]
+[ext_resource type="Texture2D" uid="uid://ctqft3ouguljb" path="res://assets/images/body.png" id="3_krsvo"]
+[ext_resource type="Texture2D" uid="uid://8avvfjvqfv8k" path="res://assets/images/limb.png" id="4_67a7i"]
+[ext_resource type="FontFile" uid="uid://delcm1c1fa0k2" path="res://assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="5_tnoey"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7uo3x"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Bkgd" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 646.0
+
+[node name="HangmanPole" type="Sprite2D" parent="Bkgd"]
+position = Vector2(225, 364)
+scale = Vector2(0.205017, 0.169977)
+texture = ExtResource("1_a0cch")
+
+[node name="Head" type="Sprite2D" parent="Bkgd/HangmanPole"]
+position = Vector2(476.79, -405.202)
+scale = Vector2(0.273065, 0.308489)
+texture = ExtResource("2_4p5hf")
+
+[node name="Body" type="Sprite2D" parent="Bkgd/HangmanPole"]
+position = Vector2(496.3, 336.075)
+rotation = -0.967023
+scale = Vector2(0.990527, 0.880724)
+skew = 0.183298
+texture = ExtResource("3_krsvo")
+
+[node name="Arm1" type="Sprite2D" parent="Bkgd/HangmanPole"]
+position = Vector2(335.338, 183.113)
+rotation = -0.858462
+scale = Vector2(2.39659, 1.03435)
+skew = 0.18619
+texture = ExtResource("4_67a7i")
+
+[node name="Arm2" type="Sprite2D" parent="Bkgd/HangmanPole"]
+position = Vector2(598.731, 188.996)
+rotation = -2.30303
+scale = Vector2(2.38763, 1.03814)
+skew = -0.185748
+texture = ExtResource("4_67a7i")
+flip_v = true
+
+[node name="Leg1" type="Sprite2D" parent="Bkgd/HangmanPole"]
+position = Vector2(335.338, 906.74)
+rotation = -0.858462
+scale = Vector2(2.39659, 1.03435)
+skew = 0.18619
+texture = ExtResource("4_67a7i")
+
+[node name="Leg2" type="Sprite2D" parent="Bkgd/HangmanPole"]
+position = Vector2(593.853, 906.74)
+rotation = -2.27915
+scale = Vector2(2.39839, 1.03358)
+skew = -0.186244
+texture = ExtResource("4_67a7i")
+flip_v = true
+
+[node name="GameOver" type="Label" parent="."]
+offset_left = 605.0
+offset_top = 149.0
+offset_right = 974.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_tnoey")
+theme_override_font_sizes/font_size = 50
+text = "Game Over!!!"
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(37, -11)
+points = PackedVector2Array(647, 230, 822, 230)
+width = 1.0
+default_color = Color(0.0156863, 0.0156863, 0.0156863, 1)
+
+[node name="TryAgain" type="Button" parent="."]
+offset_left = 702.0
+offset_top = 436.0
+offset_right = 854.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_tnoey")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_7uo3x")
+text = "Try Again"
