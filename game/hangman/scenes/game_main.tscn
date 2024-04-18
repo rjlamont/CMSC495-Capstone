@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfite847n6igs"]
+[gd_scene load_steps=14 format=3 uid="uid://dfite847n6igs"]
 
 [ext_resource type="Texture2D" uid="uid://cvo3tr30dt1cs" path="res://assets/images/HangmanPole.png" id="1_4waj1"]
 [ext_resource type="Script" path="res://scenes/keyboard.gd" id="1_ad8ha"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8avvfjvqfv8k" path="res://assets/images/limb.png" id="4_ayjk8"]
 [ext_resource type="FontFile" uid="uid://delcm1c1fa0k2" path="res://assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="6_fxo1g"]
 [ext_resource type="Texture2D" uid="uid://cbvmkvc1w35nf" path="res://assets/images/blank.png" id="7_gh4ta"]
+[ext_resource type="PackedScene" uid="uid://82wbchi1ii5c" path="res://scenes/game_over.tscn" id="8_ecm87"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2ebrp"]
 
@@ -27,11 +28,11 @@ shadow_color = Color(0.352941, 0.352941, 0.352941, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3l8b"]
 
-[node name="Node2D" type="Node2D"]
+[node name="GameMain" type="Node2D"]
 material = SubResource("ShaderMaterial_2ebrp")
 script = ExtResource("1_ad8ha")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Bkgd" type="ColorRect" parent="."]
 offset_right = 1151.0
 offset_bottom = 646.0
 
@@ -82,145 +83,430 @@ skew = -0.186244
 texture = ExtResource("4_ayjk8")
 flip_v = true
 
-[node name="Blank" type="Sprite2D" parent="."]
+[node name="Blank1" type="Sprite2D" parent="."]
 position = Vector2(490.25, 146.75)
 scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank2" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(217.284, 0)
+[node name="Label1" type="Label" parent="Blank1"]
+offset_left = -95.0
+offset_top = -113.0
+offset_right = 98.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank2" type="Sprite2D" parent="."]
+position = Vector2(534.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank3" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(434.568, 0)
+[node name="Label2" type="Label" parent="Blank2"]
+offset_left = -95.0
+offset_top = -113.0
+offset_right = 98.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank3" type="Sprite2D" parent="."]
+position = Vector2(578.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank4" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(651.852, 0)
+[node name="Label3" type="Label" parent="Blank3"]
+offset_left = -90.1236
+offset_top = -112.579
+offset_right = 102.876
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank4" type="Sprite2D" parent="."]
+position = Vector2(622.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank5" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(869.136, 0)
+[node name="Label4" type="Label" parent="Blank4"]
+offset_left = -95.0618
+offset_top = -112.579
+offset_right = 97.9382
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank5" type="Sprite2D" parent="."]
+position = Vector2(666.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank6" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1086.42, 0)
+[node name="Label5" type="Label" parent="Blank5"]
+offset_left = -90.1235
+offset_top = -112.579
+offset_right = 102.876
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank6" type="Sprite2D" parent="."]
+position = Vector2(710.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank7" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1303.7, 0)
+[node name="Label6" type="Label" parent="Blank6"]
+offset_left = -100.0
+offset_top = -112.579
+offset_right = 92.9995
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank7" type="Sprite2D" parent="."]
+position = Vector2(754.249, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank8" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1525.93, 0)
+[node name="Label7" type="Label" parent="Blank7"]
+offset_left = -95.0583
+offset_top = -112.579
+offset_right = 97.9417
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank8" type="Sprite2D" parent="."]
+position = Vector2(799.251, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank9" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1748.15, 0)
+[node name="Label8" type="Label" parent="Blank8"]
+offset_left = -95.0662
+offset_top = -112.579
+offset_right = 97.9338
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank9" type="Sprite2D" parent="."]
+position = Vector2(844.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank10" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1970.37, 0)
+[node name="Label9" type="Label" parent="Blank9"]
+offset_left = -95.063
+offset_top = -112.579
+offset_right = 97.937
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank10" type="Sprite2D" parent="."]
+position = Vector2(889.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank11" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(2192.59, 0)
+[node name="Label10" type="Label" parent="Blank10"]
+offset_left = -90.1235
+offset_top = -112.579
+offset_right = 102.876
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank11" type="Sprite2D" parent="."]
+position = Vector2(934.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank12" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(2414.81, 0)
+[node name="Label11" type="Label" parent="Blank11"]
+offset_left = -95.0596
+offset_top = -112.579
+offset_right = 97.9404
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank12" type="Sprite2D" parent="."]
+position = Vector2(979.249, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank13" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(2637.04, 0)
+[node name="Label12" type="Label" parent="Blank12"]
+offset_left = -104.934
+offset_top = -112.579
+offset_right = 88.0664
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank13" type="Sprite2D" parent="."]
+position = Vector2(1024.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank14" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(2864.2, 0)
+[node name="Label13" type="Label" parent="Blank13"]
+offset_left = -95.0654
+offset_top = -112.579
+offset_right = 97.9346
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank14" type="Sprite2D" parent="."]
+position = Vector2(1070.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank15" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(3081.48, 0)
+[node name="Label14" type="Label" parent="Blank14"]
+offset_left = -95.064
+offset_top = -112.579
+offset_right = 97.936
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank15" type="Sprite2D" parent="."]
+position = Vector2(1114.25, 146.75)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank16" type="Sprite2D" parent="Blank"]
-position = Vector2(-1.23438, 174.214)
+[node name="Label15" type="Label" parent="Blank15"]
+offset_left = -95.061
+offset_top = -112.579
+offset_right = 97.939
+offset_bottom = 19.4214
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank16" type="Sprite2D" parent="."]
+position = Vector2(490, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank17" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(220.988, 174.214)
+[node name="Label16" type="Label" parent="Blank16"]
+offset_left = -98.7649
+offset_top = -113.208
+offset_right = 94.2351
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank17" type="Sprite2D" parent="."]
+position = Vector2(535, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank18" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(438.272, 174.214)
+[node name="Label17" type="Label" parent="Blank17"]
+offset_left = -98.7659
+offset_top = -113.208
+offset_right = 94.2341
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank18" type="Sprite2D" parent="."]
+position = Vector2(579, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank19" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(660.494, 174.214)
+[node name="Label18" type="Label" parent="Blank18"]
+offset_left = -98.7659
+offset_top = -113.208
+offset_right = 94.2341
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank19" type="Sprite2D" parent="."]
+position = Vector2(624, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank20" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(877.778, 174.214)
+[node name="Label19" type="Label" parent="Blank19"]
+offset_left = -93.8274
+offset_top = -113.208
+offset_right = 99.1726
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank20" type="Sprite2D" parent="."]
+position = Vector2(668, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank21" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1095.06, 174.214)
+[node name="Label20" type="Label" parent="Blank20"]
+offset_left = -98.7656
+offset_top = -113.208
+offset_right = 94.2344
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank21" type="Sprite2D" parent="."]
+position = Vector2(712, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank22" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1317.28, 174.214)
+[node name="Label21" type="Label" parent="Blank21"]
+offset_left = -98.7637
+offset_top = -113.208
+offset_right = 94.2363
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank22" type="Sprite2D" parent="."]
+position = Vector2(756.999, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank23" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1539.51, 174.214)
+[node name="Label22" type="Label" parent="Blank22"]
+offset_left = -98.7615
+offset_top = -113.208
+offset_right = 94.2385
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank23" type="Sprite2D" parent="."]
+position = Vector2(802.001, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank24" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1761.73, 174.214)
+[node name="Label23" type="Label" parent="Blank23"]
+offset_left = -93.8311
+offset_top = -113.208
+offset_right = 99.1689
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank24" type="Sprite2D" parent="."]
+position = Vector2(847, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="Blank25" type="Sprite2D" parent="Blank"]
-visible = false
-position = Vector2(1988.89, 174.214)
+[node name="Label24" type="Label" parent="Blank24"]
+offset_left = -98.7671
+offset_top = -113.208
+offset_right = 94.2329
+offset_bottom = 18.7923
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Blank25" type="Sprite2D" parent="."]
+position = Vector2(893, 216)
+scale = Vector2(0.2025, 0.3975)
 texture = ExtResource("7_gh4ta")
 
-[node name="FirstWord" type="RichTextLabel" parent="."]
-offset_left = 536.0
-offset_top = 105.0
-offset_right = 1102.0
-offset_bottom = 145.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "FIRST WORD AREA. LONGEST FIRST WORD WON'T EXCEED 15 CHARS"
-
-[node name="SecondWord" type="RichTextLabel" parent="."]
-offset_left = 473.0
-offset_top = 166.0
-offset_right = 1039.0
-offset_bottom = 206.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "SECOND WORD AREA. LONGEST SECOND WORD WON'T EXCEED 10 CHARS"
+[node name="Label25" type="Label" parent="Blank25"]
+offset_left = -93.7544
+offset_top = -113.214
+offset_right = 99.2456
+offset_bottom = 18.786
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
 
 [node name="Letters" type="HBoxContainer" parent="."]
 offset_left = 514.0
@@ -782,6 +1068,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_7yngu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ya3lg")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j3l8b")
 text = "X"
+
+[node name="GameOver" parent="." instance=ExtResource("8_ecm87")]
+visible = false
 
 [connection signal="pressed" from="Letters/VBoxContainer/ButtonA" to="." method="_on_button_a_pressed"]
 [connection signal="pressed" from="Letters/VBoxContainer/ButtonG" to="." method="_on_button_g_pressed"]
