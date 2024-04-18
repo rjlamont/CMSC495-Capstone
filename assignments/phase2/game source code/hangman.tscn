@@ -1,0 +1,195 @@
+[gd_scene load_steps=4 format=3 uid="uid://bphty8kedssle"]
+
+[ext_resource type="Texture2D" uid="uid://b34dp4sypier8" path="res://Assets/images/HangmanPole.png" id="1_1kbc0"]
+[ext_resource type="Script" path="res://scripts/hangman.gd" id="1_2ye8o"]
+[ext_resource type="FontFile" uid="uid://delcm1c1fa0k2" path="res://Assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="3_ug43q"]
+
+[node name="HangMan" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ye8o")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HangPole" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_1kbc0")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Wrong" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong5" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong6" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Result" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 64
+text = "_____________ "
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_ug43q")
+placeholder_text = "Enter a Character"
+max_length = 1
+
+[node name="Attempt" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(127, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 28
+text = "Attempt"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WordGuess" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_ug43q")
+placeholder_text = "Guess the whole Word"
+
+[node name="Guess" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(127, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 28
+text = "Guess"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(112, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 28
+text = "Replay"
+
+[node name="Back" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(112, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_ug43q")
+theme_override_font_sizes/font_size = 28
+text = "Return"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/Attempt" to="." method="_on_attempt_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3/Guess" to="." method="_on_guess_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
