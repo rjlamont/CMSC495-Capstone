@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmc0xc1tnx3lq"]
 
-[ext_resource type="Script" path="res://scripts/mainMenu.gd" id="1_4eunp"]
-[ext_resource type="Texture2D" uid="uid://b34dp4sypier8" path="res://Assets/HangmanPole.png" id="2_hfvbn"]
-[ext_resource type="FontFile" uid="uid://24oa1xfib5n0" path="res://Assets/DeltaBlock-Regular.ttf" id="3_sv0ro"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_eoqcx"]
+[ext_resource type="Texture2D" uid="uid://cvo3tr30dt1cs" path="res://assets/images/HangmanPole.png" id="2_t2xr1"]
+[ext_resource type="FontFile" uid="uid://delcm1c1fa0k2" path="res://assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="3_8kchl"]
 
-[node name="MainMenu" type="Control"]
+[node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4eunp")
+script = ExtResource("1_eoqcx")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -39,7 +39,7 @@ layout_mode = 2
 [node name="HangPole" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_hfvbn")
+texture = ExtResource("2_t2xr1")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
@@ -50,7 +50,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_sv0ro")
+theme_override_fonts/font = ExtResource("3_8kchl")
 theme_override_font_sizes/font_size = 64
 text = "HangMan"
 horizontal_alignment = 1
@@ -67,7 +67,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_sv0ro")
+theme_override_fonts/font = ExtResource("3_8kchl")
 theme_override_font_sizes/font_size = 32
 text = "Start"
 
@@ -76,7 +76,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_sv0ro")
+theme_override_fonts/font = ExtResource("3_8kchl")
 theme_override_font_sizes/font_size = 32
 text = "Edit"
 
@@ -85,7 +85,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_sv0ro")
+theme_override_fonts/font = ExtResource("3_8kchl")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 
