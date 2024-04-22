@@ -1,13 +1,44 @@
-/* importing JetBrains Mono font for overall textual elements */
+/* Table of Contents
+-----------------
+1. Import Fonts
+2. Base Styles
+    2.1 Root Variables
+    2.2 Reset Styles
+    2.3 Typography
+    2.4 Header Styles
+3. Layout Styles
+    3.1 General Layout
+    3.2 Back Button Styling
+4. Interactive Elements
+    4.1 Links and Buttons
+    4.2 CTA Buttons
+5. Homepage Highlights
+6. Responsive Design Adjustments
+7. Footer Styles
+*/
+
+/* ------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------- */
+/* ----------------- 1. Import Fonts --------------------------------- */
+/* ------------------------------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-/*///////////////////////// BASE STYLES ////////////////////////////*/
+/* ------------------------------------------------------------------ */
+/* ----------------- 2. Base Styles --------------------------------- */
+/* ------------------------------------------------------------------ */
+
+/* 2.1 Root Variables */
 :root {
     --gray-background: #DDD; /* sets a light grey background color for elements like toggle sections */
     --border-radius: 0.4rem; /* standard border radius for rounded corners on elements */
     --link-btn-font-size: 2.2rem; /* base font size for links and buttons, particularly on smaller screens */
 }
 
+/* 2.2 Reset Styles */
 html, body {
     height: 100%; /* ensures full viewport height coverage */
     margin: 0; /* resets margin to 0 to avoid default browser spacing */
@@ -19,6 +50,7 @@ body {
     min-height: 100%; /* guarantees that the body element at least equals the viewport height */
 }
 
+/* 2.3 Typography */
 *, h1, h2, p {
     box-sizing: border-box; /* includes padding and border in the element's total width and height */
     padding: 0; /* eliminates padding to allow for explicit spacing control */
@@ -36,21 +68,26 @@ p {
     font-size: 1.8rem; /* sets paragraph text to a larger, more readable size */
 }
 
+/* 2.4 Header Styles */
 header p {
     text-align: right; /* right-aligns text within header paragraphs for a clean, aligned look */
     margin: 1rem; /* provides space around header paragraphs to visually separate from other content */
 }
 
-/*///////////////////////// LAYOUT STYLES //////////////////////////*/
+/* ------------------------------------------------------------------ */
+/* ----------------- 3. Layout Styles ------------------------------- */
+/* ------------------------------------------------------------------ */
+
+/* 3.1 General Layout */
 .homepage {
-    height: 80vh; /* Sets homepage content height to 80% of the viewport height */
-    display: flex; /* Enables flexible box layout for direct children */
-    flex-direction: column; /* Stacks children vertically */
-    align-items: center; /* Horizontally centers children in the container */
-    justify-content: center; /* Vertically centers children in the container */
+    height: 80vh; /* sets homepage content height to 80% of the viewport height */
+    display: flex; /* enables flexible box layout for direct children */
+    flex-direction: column; /* stacks children vertically */
+    align-items: center; /* horizontally centers children in the container */
+    justify-content: center; /* vertically centers children in the container */
 }
 
-/* back button styling */
+/* 3.2 Back Button Styling */
 .back {
     display: flex; /* enables flexbox layout, offering flexible container sizing */
     align-items: center; /* centers items vertically within the container */
@@ -71,13 +108,17 @@ header p {
     margin: 0; /* resets margin to zero to control spacing explicitly */
 }
 
-/*///////////////////////// INTERACTIVE ELEMENTS //////////////////////*/
+/* ------------------------------------------------------------------- */
+/* ----------------- 4. Interactive Elements ------------------------- */
+/* ------------------------------------------------------------------- */
+
+/* 4.1 Links and Buttons */
 a, button {
     text-decoration: none; /* removes underlines from links and buttons for a cleaner look */
     font-weight: bold; /* makes text bold to highlight interactive elements */
 }
 
-/* general styles for start game and meet the team buttons */
+/* 4.2 CTA Buttons */
 .start-game, .meet-the-team, .toggle-profile {
     border-radius: var(--border-radius); /* applies a consistent rounded corner radius */
     display: block; /* makes elements block-level for easier layout management */
@@ -90,7 +131,10 @@ a, button {
     text-decoration: none; /* prevents any text underlining */
 }
 
-/*///////////////////////// ADDITIONAL HOMEPAGE HIGHLIGHTS //////////////////////*/
+/* ------------------------------------------------------------------- */
+/* ----------------- 5. Homepage Highlights--------------------------- */
+/* ------------------------------------------------------------------- */
+
 /* styles for section highlighting various features or sections */
 .highlights {
     display: grid; /* utilizes grid layout for structural arrangement */
@@ -121,7 +165,9 @@ a, button {
     border-radius: var(--border-radius); /* consistent rounded corners for aesthetic cohesion */
 }
 
-/*///////////////////////// RESPONSIVE DESIGN ////////////////////////*/
+
+/* ----------------- 6. Responsive Design Adjustments ------------------------------ */
+
 @media only screen and (max-width: 480px) {
     h1 {
         font-size: 5.5rem; /* increases header font size for visibility on small screens */
@@ -163,4 +209,66 @@ a, button {
 .collapse-top-margin, .collapse-bottom-margin {
     margin-top: 0; /* eliminates top margin when elements are visually collapsed */
     margin-bottom: 0; /* removes bottom margin to maintain tight layout when collapsed */
+}
+
+
+/*----------------- ///////////////////////// FOOTER STYLES -----------------*/
+
+/* Footer Styles */
+.footer-container {
+    display: flex; /* yse flexbox for horizontal alignment */
+    justify-content: center; /* center content horizontally */
+    align-items: center; /* center content vertically */
+    flex-wrap: wrap; /* allow items to wrap onto the next line on smaller screens */
+    text-align: center; /* ensure text is centered */
+    padding: 20px; /* add padding for spacing */
+    background-color: var(--gray-background); /* use your root variable for consistent styling */
+    font-size: 0.8rem; /* smaller font size as requested */
+}
+
+.footer-links, .footer-legal, .footer-university {
+    margin: 0 10px; /* adds horizontal margin for separation */
+    padding: 5px; /* adds padding for visual space */
+    flex: 1 1 auto; /* flex grow, shrink and basis set to auto for flexibility */
+}
+
+.footer-links ul {
+    display: flex; /* make the list horizontal */
+    padding: 0; /* remove default padding */
+    list-style: none; /* remove list bullets */
+    align-items: center; /* vertically align list items */
+}
+
+.footer-links li {
+    margin-right: 15px; /* right margin for spacing between links */
+}
+
+.footer-links li:last-child {
+    margin-right: 0; /* remove margin for the last item */
+}
+
+.footer-links a {
+    color: inherit; /* links inherit the color from parent for consistency */
+    text-decoration: none; /* no underline */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* underline on hover for better usability */
+}
+
+.footer-legal a {
+    text-decoration: underline; /* ensures links are clearly indicated */
+}
+
+/* Additional styles to make sure everything looks good on smaller screens */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* stack footer content vertically on smaller screens */
+    }
+
+    .footer-links ul {
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 10px; /* top margin for separation from other content */
+    }
 }
