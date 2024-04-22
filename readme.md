@@ -3,7 +3,7 @@
 Welcome to our Capstone Project for the University of Maryland Global Campus undergraduate degree. This project is a collaborative effort by a team of five students, divided into web development and game design roles, to create an educational platform. This platform includes a responsive website that hosts an interactive Hangman game focused on teaching programming concepts.
 
 ## Project Overview
-111
+
 Our goal is to combine education and entertainment, leveraging the appeal of the classic Hangman game to introduce and reinforce programming concepts. The project is split into two main components:
 - **The Website:** Designed and built by our front-end development team, it serves as the platform's backbone, offering information about the project, the team, and hosting the interactive game.
 - **The Game:** Developed by our game design team, it challenges users to guess programming-related words, promoting learning through engagement and interaction.
