@@ -1,0 +1,763 @@
+[gd_scene load_steps=8 format=3 uid="uid://bphty8kedssle"]
+
+[ext_resource type="Texture2D" uid="uid://cvo3tr30dt1cs" path="res://assets/images/HangmanPole.png" id="1_4waj1"]
+[ext_resource type="Script" path="res://scripts/hangman.gd" id="1_vasth"]
+[ext_resource type="FontFile" uid="uid://delcm1c1fa0k2" path="res://assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="6_fxo1g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3c6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wws34"]
+bg_color = Color(0, 0, 0, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oplsm"]
+shadow_color = Color(0.352941, 0.352941, 0.352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrxx4"]
+
+[node name="game_main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vasth")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HangPole" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_4waj1")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Wrong" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong5" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Wrong6" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 64
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Result" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 64
+text = "_____________ "
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="keyboard" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.83
+theme_override_constants/separation = 38
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonA" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "A"
+
+[node name="ButtonG" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "G"
+
+[node name="ButtonM" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "M"
+
+[node name="ButtonS" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 1.43
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "S"
+
+[node name="ButtonY" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "Y"
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonB" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "B"
+
+[node name="ButtonH" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "H"
+
+[node name="ButtonN" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "N"
+
+[node name="ButtonT" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "T"
+
+[node name="ButtonZ" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "Z"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonC" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "C"
+
+[node name="ButtonI" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "I"
+
+[node name="ButtonO" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "O"
+
+[node name="ButtonU" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "U"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonD" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "D"
+
+[node name="ButtonJ" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "J"
+
+[node name="ButtonP" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "P"
+
+[node name="ButtonV" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "V"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonE" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "E"
+
+[node name="ButtonK" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "K"
+
+[node name="ButtonQ" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "Q"
+
+[node name="ButtonW" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 1.43
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "W"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="ButtonF" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "F"
+
+[node name="ButtonL" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "L"
+
+[node name="ButtonR" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "R"
+
+[node name="ButtonX" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/VBoxContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 1.43
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.458824, 0.498039, 0.470588, 1)
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wm3c6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wws34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oplsm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mrxx4")
+text = "X"
+
+[node name="Attempt" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard"]
+custom_minimum_size = Vector2(127, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 28
+text = "Attempt"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WordGuess" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("6_fxo1g")
+placeholder_text = "Guess the whole Word"
+
+[node name="Guess" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(127, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 28
+text = "Guess"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(112, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 28
+text = "Replay"
+
+[node name="Back" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(112, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("6_fxo1g")
+theme_override_font_sizes/font_size = 28
+text = "Return"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/keyboard/Attempt" to="." method="_on_attempt_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3/Guess" to="." method="_on_guess_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
