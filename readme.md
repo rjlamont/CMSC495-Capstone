@@ -1,4 +1,4 @@
-# Capstone Project: Educational Programming Hangman Game & Website
+# Capstone Project: Educational Programming Hangman Game & Website REPO Readme.md
 
 Welcome to our Capstone Project for the University of Maryland Global Campus undergraduate degree. This project is a collaborative effort by a team of five students, divided into web development and game design roles, to create an educational platform. This platform includes a responsive website that hosts an interactive Hangman game focused on teaching programming concepts.
 
@@ -30,21 +30,6 @@ To explore the website and play the game, visit our GitHub Pages site:
 
 This project is the culmination of our undergraduate studies, and we welcome feedback, contributions, and suggestions. Whether you're interested in enhancing the game, improving the site's design, or adding educational content, your input is invaluable.
 
-### Local Setup
-
-To set up the project locally for development:
-
-```bash
-git clone https://github.com/AwaywithCharles/CMSC495-Capstone.git
-cd CMSC495-Capstone
-'''
-
-Please refer to `CONTRIBUTING.md` for more detailed instructions on how to contribute to the project.
-
-## How to Contribute
-
-We encourage contributions from all! For guidelines on contributing, please see `CONTRIBUTING.md`. (add link later)
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) (update license to MIT license) file for details.
+See the [LICENSE.md](LICENSE.md) file for more details.
