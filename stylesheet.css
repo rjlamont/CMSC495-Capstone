@@ -130,8 +130,52 @@ img {
 
 /*/////////////////////////// TABLET STYLES ////////////////////////*/
 @media only screen and (max-width: 900px) {
-    /* insert tablet styles here */
-}
+    /* Back button size adjustment. */
+    .back {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+        .back img[src="back-arrow.svg"] {
+            height: 3rem;
+            width: auto;
+            padding: 0 1.5rem;
+        }
+
+        .back p {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+    /* Homepage styles are fine as set. */
+
+    /* Meet the Team styles */
+    h1.meet-the-team {
+        font-size: 2.5rem;
+        margin: 3rem 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    img {
+        float: left;
+    }
+
+    .profile-info {
+        padding: 3rem;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    .repeat-name {
+        font-weight: bold;
+    }
+
 
 /*/////////////////////////// MOBILE STYLES ///////////////////////*/
 @media only screen and (max-width: 480px) {
