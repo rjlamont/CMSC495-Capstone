@@ -1,3 +1,4 @@
+/* ------------------------------------------------------------------- */
 /* Table of Contents
 -----------------
 1. Import Fonts
@@ -15,16 +16,21 @@
 5. Homepage Styles
 6. Responsive Design Adjustments
 7. Footer Styles
+8. Hangman Game Styles
 */
-
 /* ------------------------------------------------------------------- */
 
+
+
+/* ------------------------------------------------------------------- */
 /* ----------------- 1. Import Fonts --------------------------------- */
+/* ------------------------------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 /* ------------------------------------------------------------------- */
-
 /* ----------------- 2. Base Styles --------------------------------- */
+/* ------------------------------------------------------------------- */
 
 /* 2.1 Root Variables */
 :root {
@@ -92,8 +98,8 @@ button, .start-game {
 }
 
 /* ------------------------------------------------------------------- */
-
 /* ----------------- 3. Layout Styles ------------------------------- */
+/* ------------------------------------------------------------------- */
 
 /* 3.1 General Layout */
 .homepage {
@@ -124,6 +130,7 @@ button, .start-game {
 
 /* ------------------------------------------------------------------- */
 /* ----------------- 4. Interactive Elements ------------------------- */
+/* ------------------------------------------------------------------- */
 
 /* 4.1 CTA Buttons */
 .start-game, .meet-the-team, .toggle-profile {
@@ -138,8 +145,8 @@ button, .start-game {
 }
 
 /* ------------------------------------------------------------------- */
-
 /* ----------------- 5. Homepage Styles --------------------------- */
+/* ------------------------------------------------------------------- */
 
 /* styles for section highlighting various features or sections */
 .highlights {
@@ -172,8 +179,8 @@ button, .start-game {
 }
 
 /* ------------------------------------------------------------------- */
-
 /* ----------------- 6. Responsive Design Adjustments ---------------- */
+/* ------------------------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
     :root {
@@ -261,8 +268,8 @@ button, .start-game {
 }
 
 /* ------------------------------------------------------------------- */
-
-/*----------------- 7. Footer Styles -----------------*/
+/* ----------------- 7. Footer Stles ---------------------------------- */
+/* ------------------------------------------------------------------- */
 
 /* Footer Styles */
 .footer-container {
@@ -321,4 +328,105 @@ button, .start-game {
         flex-direction: column;
         margin-top: 10px;
     }
+}
+
+/* ------------------------------------------------------------------- */
+/* ----------------- 8. Hamg,am---------------------- ---------------- */
+/* ------------------------------------------------------------------- */
+/* General Styles for Hangman Game Container */
+.hangman-game-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Styles for Each Hangman Game Section */
+.hangman-game {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Specific Container for Hangman Gameplay */
+.hangman-gameplay {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.hangman-image-container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hangman-images {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles for Displaying Hangman Images */
+.hangman-images {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for Text Displays and Input Fields in Hangman Game */
+.hangman-word-display, .hangman-wrong-guesses {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.hangman-input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Hangman Button Styles */
+.hangman-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hangman-button:hover {
+    background-color: #0056b3;
+}
+
+.letter-buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #808080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.letter-buttons button:disabled {
+    cursor: default;
+    opacity: 0.5;
 }

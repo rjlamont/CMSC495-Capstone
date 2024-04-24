@@ -44,6 +44,23 @@
                 <iframe src="https://awaywithcharles.itch.io/hangmanbase" width="800" height="600" allowfullscreen></iframe>
             </section>
 
+            <section class="hangman-game">
+                <h2>Hangman</h2>
+                <div id="hangmanGameplay" class="hangman-gameplay">
+                    <div class="hangman-image-container">
+                        <img id="hangmanImages" class="hangman-images" src="images/HangmanPole.png" alt="Hangman" style="height: 300px;">
+                    </div>
+                    <div style="flex: 2; display: flex; flex-direction: column; align-items: center;">
+                        <div class="hangman-word-display" id="wordDisplay" style="font-size: 24px; margin-bottom: 20px;"></div>
+                        <div id="letterButtons" class="letter-buttons" style="margin-bottom: 20px;"></div>
+                        <div class="hangman-wrong-guesses" id="wrongGuesses" style="font-size: 18px; color: red; margin-bottom: 20px;"></div>
+                        <input type="text" class="hangman-input" id="fullWordGuess" placeholder="Guess the full word" style="margin-top: 20px;"/>
+                        <button class="hangman-button" onclick="submitFullWordGuess()">Guess Word</button>
+                        <button class="hangman-button" onclick="restartGame()">Restart Game</button>
+                    </div>
+                </div>
+            </section>
+            
             <!-- Game 2: additional games can go here like this minesweeper?-->
             <!-- <section class="game">
                 <h2>game</h2>
