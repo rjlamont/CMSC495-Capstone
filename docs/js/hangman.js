@@ -85,7 +85,7 @@ const hangmanImages = [
     'images/hangman/HangmanPoleWithHeadAndBody.png',
     'images/hangman/HangmanPoleWithHeadAndBodyAndLeftHand.png',
     'images/hangman/HangmanPoleWithHeadAndBodyAndBothHands.png',
-    'images/hangman/HangmanPoleWithHeadandBodyAndBothHandsandLeftLeg.png',
+    'images/hangman/HangmanPoleWithHeadAndBodyAndBothHandsAndLeftLeg.png',
     'images/hangman/HangmanPoleWithHangman.png'
 ];
 

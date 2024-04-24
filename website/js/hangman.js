@@ -82,10 +82,10 @@ const maxAttempts = 6;
 const hangmanImages = [
     'images/hangman/HangmanPole.png',
     'images/hangman/HangmanPoleWithHead.png',
-    'images/hangman/HangmanPoleWithHeadandBody.png',
-    'images/hangman/HangmanPoleWithHeadandBodyAndLeftHand.png',
-    'images/hangman/HangmanPoleWithHeadandBodyAndBothHands.png',
-    'images/hangman/HangmanPoleWithHeadandBodyAndBothHandsandLeftLeg.png',
+    'images/hangman/HangmanPoleWithHeadAndBody.png',
+    'images/hangman/HangmanPoleWithHeadAndBodyAndLeftHand.png',
+    'images/hangman/HangmanPoleWithHeadAndBodyAndBothHands.png',
+    'images/hangman/HangmanPoleWithHeadAndBodyAndBothHandsAndLeftLeg.png',
     'images/hangman/HangmanPoleWithHangman.png'
 ];
 
