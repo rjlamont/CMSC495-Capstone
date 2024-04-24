@@ -86,7 +86,7 @@ const hangmanImages = [
     'images/hangman/HangmanPoleWithHeadAndBodyAndLeftHand.png',
     'images/hangman/HangmanPoleWithHeadAndBodyAndBothHands.png',
     'images/hangman/HangmanPoleWithHeadAndBodyAndBothHandsAndLeftLeg.png',
-    'images/hangman/HangmanPoleWithHangman.png'
+    'images/hangman/HangmanPoleWithHangMan.png'
 ];
 
 // init game once the HTML document has fully loaded.
