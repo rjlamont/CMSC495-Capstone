@@ -20,13 +20,13 @@ const maxAttempts = 6;
 
 // paths to images corresponding to different stages of hangman.
 const hangmanImages = [
-    'images/hangman/HangmanPole.png',
-    'images/hangman/HangmanPoleWithHead.png',
-    'images/hangman/HangmanPoleWithHeadandBody.png',
-    'images/hangman/HangmanPoleWithHeadandBodyAndLeftHand.png',
-    'images/hangman/HangmanPoleWithHeadandBodyAndBothHands.png',
-    'images/hangman/HangmanPoleWithHeadandBodyAndBothHandsandLeftLeg.png',
-    'images/hangman/HangmanPoleWithHangman.png'
+    'docs/images/hangman/HangmanPole.png',
+    'docs/images/hangman/HangmanPoleWithHead.png',
+    'docs/images/hangman/HangmanPoleWithHeadandBody.png',
+    'docs/images/hangman/HangmanPoleWithHeadandBodyAndLeftHand.png',
+    'docs/images/hangman/HangmanPoleWithHeadandBodyAndBothHands.png',
+    'docs/images/hangman/HangmanPoleWithHeadandBodyAndBothHandsandLeftLeg.png',
+    'docs/images/hangman/HangmanPoleWithHangman.png'
 ];
 
 // init game once the HTML document has fully loaded.
