@@ -89,26 +89,43 @@ const hangmanImages = [
     'images/hangman/HangmanPoleWithHangMan.png'
 ];
 
+
+// added to handle wrong guesses and initialize and now claling correct html for funcitonality
+function updateWrongGuesses() {
+    const wrongGuessesElement = document.getElementById('wrongGuesses');
+    console.log(wrongGuessesElement);
+    if (wrongGuessesElement !== null) {
+        wrongGuessesElement.textContent = 'Wrong guesses: ' + wrongGuesses.join(', ');
+    } else {
+        console.error('Wrong guesses display element not found!');
+    }
+}
+
+
 // init game once the HTML document has fully loaded.
 document.addEventListener('DOMContentLoaded', initializeGame);
 
 // init game by setting game state and updating UI components.
 function initializeGame() {
-    // select random word from list.
-    const randomIndex = Math.floor(Math.random() * words.length);
-    selectedWord = words[randomIndex];
-    selectedDefinition = wordDefinitions[selectedWord];
+    try{
+        // select random word from list.
+        const randomIndex = Math.floor(Math.random() * words.length);
+        selectedWord = words[randomIndex];
+        selectedDefinition = wordDefinitions[selectedWord];
 
-    // reset game state.
-    guessedLetters = [];
-    wrongGuesses = [];
-    attempts = 0;
+        // reset game state.
+        guessedLetters = [];
+        wrongGuesses = [];
+        attempts = 0;
 
-    // init UI components.
-    createLetterButtons();
-    updateWordDisplay();
-    updateHangmanImage();
-    updateWrongGuesses();
+        // init UI components.
+        createLetterButtons();
+        updateWordDisplay();
+        updateHangmanImage();
+        updateWrongGuesses();
+    } catch (error) {
+            console.error('Error Initializing game:', error);
+    }
 }
 
 // creates/displays letter buttons for user interaction.
@@ -128,29 +145,37 @@ function createLetterButtons() {
     });
 }
 
-// handles logic whenletter guessed.
-function handleGuess(letter) {
-    const button = document.getElementById('letter-' + letter);
-    button.disabled = true; // disable button after click.
+// hanles guessess, added console logging and try/catch for troubleshooting....
 
-    if (selectedWord.toUpperCase().includes(letter)) {
-        // if letter in word, update display.
-        guessedLetters.push(letter);
-        button.style.backgroundColor = '#D3D3D3';
-        updateWordDisplay();
-    } else {
-        // if letter not in word, handle incorrect guess.
-        if (!wrongGuesses.includes(letter)) {
-            wrongGuesses.push(letter);
-            attempts++;
-            button.style.backgroundColor = 'red';
-            updateHangmanImage();
-            updateWrongGuesses();
+function handleGuess(letter) {
+    try {
+        console.log('Guessed letter:', letter);
+        console.log('Current state:', { guessedLetters, wrongGuesses, attempts });
+        
+        const button = document.getElementById('letter-' + letter);
+        button.disabled = true;
+
+        if (selectedWord.toUpperCase().includes(letter)) {
+            if (!guessedLetters.includes(letter)) {
+                guessedLetters.push(letter);
+            }
+            button.style.backgroundColor = '#D3D3D3';
+            updateWordDisplay();
+        } else {
+            if (!wrongGuesses.includes(letter)) {
+                wrongGuesses.push(letter);
+                attempts++;
+                button.style.backgroundColor = 'red';
+                updateHangmanImage();
+                updateWrongGuesses();
+            }
         }
+        checkGameOver();
+    } catch (error) {
+        console.error('Error handling guess:', error, { guessedLetters, wrongGuesses, attempts });
     }
-    // check if game is over after each guess.
-    checkGameOver();
 }
+
 
 // updates display of word with correctly guessed letters.
 function updateWordDisplay() {
@@ -164,15 +189,21 @@ function updateWordDisplay() {
 function checkGameOver() {
     const wordDisplay = document.getElementById('wordDisplay').innerText.replace(/\s+/g, '');
     if (!wordDisplay.includes('_')) {
-        // if no blanks, player wins.
+        // If no blanks, player wins.
         alert(`Congratulations! You won! The word was "${selectedWord}". Definition: ${selectedDefinition}`);
         initializeGame();
-    } else if (attempts > maxAttempts) {
-        // If max number of attempts is exceeded, player loses.
-        alert(`Game Over! The correct word was "${selectedWord}". Definition: ${selectedDefinition}`);
-        initializeGame();
+    } else if (attempts >= maxAttempts) {
+        // If max number of attempts is reached, update image before showing the game over alert.
+        updateHangmanImage();
+        
+        // Delay the game over alert to allow the image to update on the screen.
+        setTimeout(() => {
+            alert(`Game Over! The correct word was "${selectedWord}". Definition: ${selectedDefinition}`);
+            initializeGame();
+        }, 500); // Delay of 500 milliseconds (0.5 seconds)
     }
 }
+
 
 // updates hangman image to reflect current number of incorrect guesses.
 function updateHangmanImage() {
