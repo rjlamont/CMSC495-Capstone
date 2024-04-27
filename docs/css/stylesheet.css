@@ -111,22 +111,74 @@ button, .start-game {
     justify-content: center;
 }
 
-/* 3.2 Back Button Styling */
-.back {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+/* Navbar styling */
+nav {
+    background-color: var(--gray-background);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.back img[src="back-arrow.svg"] {
-    height: 3.5rem;
-    width: auto;
-    padding: 0 1.5rem;
+nav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 2.5rem 3rem;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
-.back p {
-    font-size: 2.2rem;
+.header {
+    float: right;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 2.5rem 3rem;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* game stylings */
+
+.game-container h1 {
+    padding-top: 9.5rem;
+    font-size: 2rem;
+}
+
+/* meet the team stylings */
+
+.meet-the-team {
+    padding-top: 9.5rem;
+    font-size: 3rem;
+}
+.profile img {
+    float: left;
+}
+
+.profile-info {
+    padding: 6rem;
+}
+
+.repeat-name {
+    font-size: 2rem;
     font-weight: bold;
+}
+
+.profile-info h2 {
+    font-size: 2rem;
+}
+
+/* documentation stylings */
+.documents h1 {
+    padding-top: 9rem;
+    font-size: 3rem;
+}
+
+.documents h2 {
+    padding: 2rem;
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* ------------------------------------------------------------------- */
@@ -148,6 +200,15 @@ button, .start-game {
 /* ------------------------------------------------------------------- */
 /* ----------------- 5. Homepage Styles --------------------------- */
 /* ------------------------------------------------------------------- */
+
+/* title/text stylings */
+.homepage h1 {
+    font-size: 3rem
+}
+
+.homepage p {
+    text-align: center;
+}
 
 /* styles for section highlighting various features or sections */
 .highlights {
@@ -172,8 +233,9 @@ button, .start-game {
 }
 
 .cta-buttons a {
+    font-size: 1.5rem;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: black;
     color: white;
     text-decoration: none;
     border-radius: var(--border-radius);
@@ -335,6 +397,12 @@ button, .start-game {
 /* ----------------- 8. Hangman---------------------- ---------------- */
 /* ------------------------------------------------------------------- */
 
+/* styling for game header */
+.game-container h1{
+    padding-top: 7rem;
+    font-size: 3rem;
+    text-align: center;
+}
 /* General Styles for Hangman Game Container */
 .hangman-game-container {
     max-width: 1200px;
@@ -405,7 +473,7 @@ button, .start-game {
 .hangman-button {
     padding: 10px 20px;
     margin: 10px;
-    background-color: #007BFF;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
@@ -463,7 +531,7 @@ button, .start-game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #007bff;
+    background-color: black;
     color: white;
     padding: 10px;
     margin: 10px;
