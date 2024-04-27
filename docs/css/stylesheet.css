@@ -17,6 +17,7 @@
 6. Responsive Design Adjustments
 7. Footer Styles
 8. Hangman Game Styles
+9. Minesweeper Game Styles
 */
 /* ------------------------------------------------------------------- */
 
@@ -68,6 +69,11 @@ p {
     font-size: 1.8rem;
 }
 
+/* 2.4 Header Styles */
+header p {
+    text-align: right;
+    margin: 1rem;
+}
 
 /* 2.5 Button and Link Styles */
 a {
@@ -105,78 +111,23 @@ button, .start-game {
     justify-content: center;
 }
 
-/* Navbar styling */
-nav {
-    background-color: var(--gray-background);
-    position: fixed;
-    top: 0;
-    width: 100%;
+/* 3.2 Back Button Styling */
+.back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-nav a {
-    float: left;
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 2.5rem 3rem;
-    text-decoration: none;
-    font-size: 2rem;
+.back img[src="back-arrow.svg"] {
+    height: 3.5rem;
+    width: auto;
+    padding: 0 1.5rem;
 }
 
-.header {
-    float: right;
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 2.5rem 3rem;
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-/* game stylings */
-
-.game-container h1 {
-    padding-top: 9.5rem;
-    font-size: 2rem;
-}
-
-/* meet the team stylings */
-
-.meet-the-team {
-    padding-top: 9.5rem;
-    font-size: 3rem;
-}
-.profile img {
-    float: left;
-}
-
-.profile-info {
-    padding: 6rem;
-}
-
-.repeat-name {
-    font-size: 2rem;
+.back p {
+    font-size: 2.2rem;
     font-weight: bold;
 }
-
-.profile-info h2 {
-    font-size: 2rem;
-}
-
-/* documentation stylings */
-.documents h1 {
-    padding-top: 9rem;
-    font-size: 3rem;
-}
-
-.documents h2 {
-    padding: 2rem;
-    font-size: 2rem;
-    text-align: center;
-}
-
-
-
 
 /* ------------------------------------------------------------------- */
 /* ----------------- 4. Interactive Elements ------------------------- */
@@ -197,15 +148,6 @@ nav a {
 /* ------------------------------------------------------------------- */
 /* ----------------- 5. Homepage Styles --------------------------- */
 /* ------------------------------------------------------------------- */
-
-/* title/text stylings */
-.homepage h1 {
-    font-size: 3rem
-}
-
-.homepage p {
-    text-align: center;
-}
 
 /* styles for section highlighting various features or sections */
 .highlights {
@@ -230,9 +172,8 @@ nav a {
 }
 
 .cta-buttons a {
-    font-size: 1.5rem;
     padding: 10px 20px;
-    background-color: black;
+    background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: var(--border-radius);
@@ -391,7 +332,7 @@ nav a {
 }
 
 /* ------------------------------------------------------------------- */
-/* ----------------- 8. Hamg,am---------------------- ---------------- */
+/* ----------------- 8. Hangman---------------------- ---------------- */
 /* ------------------------------------------------------------------- */
 
 /* General Styles for Hangman Game Container */
@@ -402,12 +343,6 @@ nav a {
 }
 
 /* Styles for Each Hangman Game Section */
-.hangman-game h2 {
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: 2rem;
-}
-
 .hangman-game {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -470,7 +405,7 @@ nav a {
 .hangman-button {
     padding: 10px 20px;
     margin: 10px;
-    background-color: black;
+    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -498,9 +433,8 @@ nav a {
     opacity: 0.5;
 }
 
-
 /* ------------------------------------------------------------------- */
-/* ----------------- 9. Minesweeper ---------------------------------- */
+/* ----------------- 8. Minesweeper ---------------------------------- */
 /* ------------------------------------------------------------------- */
 
 #minesweeper{padding:2rem}
