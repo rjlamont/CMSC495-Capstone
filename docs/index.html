@@ -8,12 +8,22 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <ul><a href="index.html">Home</a></ul>
-        <ul><a href="game.html">Games</a></ul>
-        <ul><a href="team.html">Team</a></ul>
-        <ul><a href="documents.html">Documents</a></ul>
-        <ul class="header">UMGC CMSC 495 Capstone Project</ul>
+    <nav id="nav-mobile" class="hidden">
+        <button><img src="images/menu.svg" alt="Nav menu"></button>
+        <div class="hidden">
+            <a href="index.html">Home</a>
+            <a href="game.html">Games</a>
+            <a href="team.html">Team</a>
+            <a href="documents.html">Documents</a>
+            <p class="capstone">UMGC CMSC 495 Capstone Project</p>
+        </div>
+    </nav>
+    <nav id="nav-desktop-tablet" class="hidden">
+        <a href="index.html">Home</a>
+        <a href="game.html">Games</a>
+        <a href="team.html">Team</a>
+        <a href="documents.html">Documents</a>
+        <p class="capstone">UMGC CMSC 495 Capstone Project</p>
     </nav>
 
 
@@ -37,34 +47,26 @@
                 <p>Each successful guess is not just a win—it's a learning opportunity, providing explanations and insights into programming.</p>
             </article>
         </section>
-
-        <!-- Call to Action Buttons -->
-        <div class="cta-buttons">
-            <a class="start-game" href="game.html">Start New Game</a>
-            <a class="meet-the-team" href="team.html">Meet the Team</a>
-        </div>
     </main>
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
 
+            <section class="footer-links">
+                <p><a href="index.html">Home</a> | <a href="documents.html">Documentation</a> | <a href="team.html">Team</a> </p>
+                <br>
+            </section>
+            
+            <section class="footer-legal">
+                <p><b>Legal:This project is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</b> <a href="http://creativecommons.org/licenses/by-nc/4.0/">View License</a></p>
+                <br>
+            </section>
+
+            <section class="footer-university">
+                <p><b>© 2024 by Web Game Devs. All rights reserved.</b></p>
+            </section>
+        </div>
+    </footer>
 </body>
-
-<!-- footer -->
-<footer>
-    <div class="footer-container">
-
-        <section class="footer-links">
-            <p><a href="index.html">Home</a> | <a href="documents.html">Documentation</a> | <a href="team.html">Team</a> </p>
-            <br>
-        </section>
-        
-        <section class="footer-legal">
-            <p><b>Legal:This project is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</b> <a href="http://creativecommons.org/licenses/by-nc/4.0/">View License</a></p>
-            <br>
-        </section>
-
-        <section class="footer-university">
-            <p><b>© 2024 by Web Game Devs. All rights reserved.</b></p>
-        </section>
-    </div>
-</footer>
-
+<script src="js/nav.js"></script>
 </html>
